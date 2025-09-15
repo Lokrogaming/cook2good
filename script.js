@@ -4,24 +4,57 @@ async function loadRecipes() {
   return data;
 }
 
+function getModeIcon(mode) {
+  switch(mode.toLowerCase()) {
+    case "ober-/unterhitze": return "🔥";
+    case "umluft": return "💨";
+    case "grill": return "🥩";
+    default: return "🍳";
+  }
+}
+
 function renderRecipes(recipes) {
-  const list = document.getElementById("recipe-list");
-  list.innerHTML = "";
+  const grid = document.getElementById("recipe-grid");
+  grid.innerHTML = "";
 
-  recipes.forEach(r => {
-    const div = document.createElement("div");
-    div.className = "recipe";
-
-    div.innerHTML = `
-      <h2>${r.name}</h2>
-      <h4>Zutaten:</h4>
-      <ul>${r.zutaten.map(z => `<li>${z}</li>`).join("")}</ul>
-      <h4>Zubereitung:</h4>
-      <p>${r.zubereitung}</p>
+  recipes.forEach((r, index) => {
+    const card = document.createElement("div");
+    card.className = "recipe-card";
+    card.innerHTML = `
+      <img src="${r.bild}" alt="${r.name}">
+      <div class="info">
+        <h2>${r.name}</h2>
+        <div class="mode">${getModeIcon(r.modus)} ${r.modus}</div>
+      </div>
     `;
-
-    list.appendChild(div);
+    card.addEventListener("click", () => openModal(r));
+    grid.appendChild(card);
   });
+}
+
+function openModal(recipe) {
+  const modal = document.getElementById("recipe-modal");
+  const body = document.getElementById("modal-body");
+
+  body.innerHTML = `
+    <h2>${recipe.name}</h2>
+    <img src="${recipe.bild}" style="width:100%;border-radius:8px;margin:10px 0;">
+    <p><strong>Backmodus:</strong> ${getModeIcon(recipe.modus)} ${recipe.modus}</p>
+    <h3>Zutaten:</h3>
+    <ul>${recipe.zutaten.map(z => `<li>${z}</li>`).join("")}</ul>
+    <h3>Zubereitung:</h3>
+    <p>${recipe.zubereitung}</p>
+  `;
+
+  modal.style.display = "block";
+}
+
+function initModal() {
+  const modal = document.getElementById("recipe-modal");
+  const closeBtn = document.querySelector(".close");
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
 }
 
 async function init() {
@@ -36,6 +69,8 @@ async function init() {
     );
     renderRecipes(filtered);
   });
+
+  initModal();
 }
 
 init();
