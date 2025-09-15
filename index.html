@@ -3,26 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rezeptbuch Planer</title>
+  <title>📖 Rezeptbuch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6ed0d5c689.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>📖 Mein Rezeptbuch</h1>
+  <div class="container py-4">
+    <h1 class="text-center mb-4">📖 Mein Rezeptbuch</h1>
 
-    <input type="text" id="search" placeholder="Rezepte suchen...">
+    <div class="mb-4">
+      <input type="text" id="search" class="form-control" placeholder="🔍 Rezepte oder Zutaten suchen...">
+    </div>
 
-    <div id="recipe-grid"></div>
+    <div id="recipe-list" class="row g-4"></div>
   </div>
 
-  <!-- Modal für Details -->
-  <div id="recipe-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div id="modal-body"></div>
+  <!-- Modal -->
+  <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="recipeModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Zutaten:</h6>
+          <ul id="modalIngredients"></ul>
+          <h6>Zubereitung:</h6>
+          <p id="modalInstructions"></p>
+          <h6>Backmodus:</h6>
+          <p id="modalMode"></p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
