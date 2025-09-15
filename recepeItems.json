@@ -33,5 +33,173 @@
     "zubereitung": "Teig ausrollen, Soße & Käse drauf, backen bei 220°C ~15 Min, mit Basilikum garnieren.",
     "modus": "Ober-/Unterhitze",
     "bild": "https://source.unsplash.com/600x400/?pizza"
+  },
+  {
+    "name": "Lasagne",
+    "zutaten": ["Lasagneplatten", "500g Hackfleisch", "1 Zwiebel", "500ml Tomatensoße", "500ml Béchamelsauce", "Käse"],
+    "zubereitung": "Hackfleisch anbraten, Tomatensoße dazu, abwechselnd mit Platten und Béchamel schichten. Mit Käse überbacken.",
+    "modus": "Umluft",
+    "bild": "https://source.unsplash.com/600x400/?lasagna"
+  },
+  {
+    "name": "Caesar Salad",
+    "zutaten": ["Römersalat", "Croutons", "Parmesan", "Caesar-Dressing", "Hähnchenbrust"],
+    "zubereitung": "Salat schneiden, Hähnchen anbraten, mit Dressing, Croutons und Parmesan servieren.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?caesar-salad"
+  },
+  {
+    "name": "Chili con Carne",
+    "zutaten": ["400g Hackfleisch", "1 Dose Kidneybohnen", "1 Dose Mais", "500ml Tomatensoße", "Chili", "Zwiebel"],
+    "zubereitung": "Hackfleisch mit Zwiebel anbraten, Bohnen, Mais und Tomatensoße dazu, würzen und köcheln lassen.",
+    "modus": "Topf",
+    "bild": "https://source.unsplash.com/600x400/?chili"
+  },
+  {
+    "name": "Rindersteak",
+    "zutaten": ["2 Rindersteaks", "Salz", "Pfeffer", "Knoblauch", "Butter"],
+    "zubereitung": "Steaks würzen, in heißer Pfanne anbraten, Knoblauch & Butter dazu, nach Wunsch garen.",
+    "modus": "Grill",
+    "bild": "https://source.unsplash.com/600x400/?steak"
+  },
+  {
+    "name": "Gemüsesuppe",
+    "zutaten": ["1 Zucchini", "2 Karotten", "2 Kartoffeln", "1 Zwiebel", "1l Gemüsebrühe"],
+    "zubereitung": "Gemüse würfeln, in Brühe kochen, pürieren oder stückig lassen.",
+    "modus": "Topf",
+    "bild": "https://source.unsplash.com/600x400/?soup"
+  },
+  {
+    "name": "Rührei",
+    "zutaten": ["4 Eier", "50ml Milch", "Salz", "Pfeffer", "Butter"],
+    "zubereitung": "Eier mit Milch verquirlen, würzen, in Pfanne stocken lassen.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?scrambled-eggs"
+  },
+  {
+    "name": "Waffeln",
+    "zutaten": ["250g Mehl", "125g Butter", "3 Eier", "100g Zucker", "250ml Milch"],
+    "zubereitung": "Alles zu Teig verrühren, im Waffeleisen backen.",
+    "modus": "Waffeleisen",
+    "bild": "https://source.unsplash.com/600x400/?waffles"
+  },
+  {
+    "name": "Gulasch",
+    "zutaten": ["500g Rindfleisch", "2 Zwiebeln", "Paprika", "500ml Brühe", "Tomatenmark"],
+    "zubereitung": "Fleisch anbraten, Zwiebel & Paprika dazu, mit Brühe ablöschen, schmoren lassen.",
+    "modus": "Topf",
+    "bild": "https://source.unsplash.com/600x400/?goulash"
+  },
+  {
+    "name": "Kartoffelsalat",
+    "zutaten": ["1kg Kartoffeln", "2 Zwiebeln", "200ml Brühe", "3 EL Essig", "3 EL Öl", "Salz", "Pfeffer", "Schnittlauch"],
+    "zubereitung": "Kartoffeln kochen, in Scheiben schneiden, Dressing aus Brühe, Essig, Öl und Zwiebeln darüber geben.",
+    "modus": "Topf",
+    "bild": "https://source.unsplash.com/600x400/?potato-salad"
+  },
+  {
+    "name": "Hamburger",
+    "zutaten": ["Burgerbrötchen", "Rinderhack-Patties", "Käse", "Salat", "Tomaten", "Zwiebeln", "Soße"],
+    "zubereitung": "Patties braten, Brötchen toasten, Zutaten schichten und servieren.",
+    "modus": "Grill",
+    "bild": "https://source.unsplash.com/600x400/?burger"
+  },
+  {
+    "name": "Currywurst",
+    "zutaten": ["2 Bratwürste", "Ketchup", "Currypulver"],
+    "zubereitung": "Würste braten, in Scheiben schneiden, mit Ketchup und Curry bestreuen.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?currywurst"
+  },
+  {
+    "name": "Apfelkuchen",
+    "zutaten": ["250g Mehl", "125g Butter", "3 Äpfel", "100g Zucker", "1 TL Zimt"],
+    "zubereitung": "Teig kneten, Äpfel schneiden, in Form legen, backen bei 180°C ~40 Min.",
+    "modus": "Ober-/Unterhitze",
+    "bild": "https://source.unsplash.com/600x400/?apple-pie"
+  },
+  {
+    "name": "Tiramisu",
+    "zutaten": ["250g Mascarpone", "3 Eier", "100g Zucker", "Löffelbiskuits", "Kaffee", "Kakaopulver"],
+    "zubereitung": "Mascarpone mit Eigelb & Zucker mischen, Eiweiß schlagen, unterheben, Biskuits in Kaffee tauchen, schichten.",
+    "modus": "Kalt",
+    "bild": "https://source.unsplash.com/600x400/?tiramisu"
+  },
+  {
+    "name": "Porridge",
+    "zutaten": ["50g Haferflocken", "200ml Milch", "1 Banane", "Honig"],
+    "zubereitung": "Haferflocken mit Milch kochen, Banane dazu, mit Honig süßen.",
+    "modus": "Topf",
+    "bild": "https://source.unsplash.com/600x400/?porridge"
+  },
+  {
+    "name": "Fischfilet",
+    "zutaten": ["2 Fischfilets", "Zitrone", "Salz", "Pfeffer", "Butter"],
+    "zubereitung": "Fisch würzen, in Pfanne mit Butter anbraten, mit Zitrone servieren.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?fish"
+  },
+  {
+    "name": "Omelett",
+    "zutaten": ["3 Eier", "50ml Milch", "Käse", "Schinken", "Salz", "Pfeffer"],
+    "zubereitung": "Eier verquirlen, würzen, in Pfanne stocken lassen, Käse & Schinken einrollen.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?omelette"
+  },
+  {
+    "name": "Sushi",
+    "zutaten": ["Sushireis", "Nori-Blätter", "Lachs", "Gurke", "Sojasoße"],
+    "zubereitung": "Reis kochen, auf Nori verteilen, mit Zutaten füllen, rollen und schneiden.",
+    "modus": "Kalt",
+    "bild": "https://source.unsplash.com/600x400/?sushi"
+  },
+  {
+    "name": "Quiche Lorraine",
+    "zutaten": ["250g Mehl", "125g Butter", "3 Eier", "200ml Sahne", "150g Speck", "Käse"],
+    "zubereitung": "Teig kneten, Form auslegen, Füllung aus Speck, Sahne, Eiern & Käse einfüllen, backen bei 180°C ~40 Min.",
+    "modus": "Ober-/Unterhitze",
+    "bild": "https://source.unsplash.com/600x400/?quiche"
+  },
+  {
+    "name": "Falafel",
+    "zutaten": ["200g Kichererbsen", "1 Zwiebel", "Knoblauch", "Koriander", "Kreuzkümmel"],
+    "zubereitung": "Kichererbsen pürieren, würzen, Bällchen formen, frittieren.",
+    "modus": "Fritteuse",
+    "bild": "https://source.unsplash.com/600x400/?falafel"
+  },
+  {
+    "name": "Ratatouille",
+    "zutaten": ["1 Aubergine", "1 Zucchini", "1 Paprika", "1 Zwiebel", "Tomaten"],
+    "zubereitung": "Gemüse schneiden, anbraten, in Auflauf schichten, mit Tomatensoße übergießen, backen.",
+    "modus": "Umluft",
+    "bild": "https://source.unsplash.com/600x400/?ratatouille"
+  },
+  {
+    "name": "Brownies",
+    "zutaten": ["200g Schokolade", "200g Butter", "3 Eier", "200g Zucker", "100g Mehl"],
+    "zubereitung": "Schokolade & Butter schmelzen, Eier & Zucker unterrühren, Mehl dazu, backen bei 180°C ~25 Min.",
+    "modus": "Ober-/Unterhitze",
+    "bild": "https://source.unsplash.com/600x400/?brownies"
+  },
+  {
+    "name": "Paella",
+    "zutaten": ["200g Reis", "200g Huhn", "100g Garnelen", "1 Paprika", "Safran", "Brühe"],
+    "zubereitung": "Reis mit Safran und Brühe kochen, Huhn und Garnelen anbraten, alles mischen.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?paella"
+  },
+  {
+    "name": "Zwiebelkuchen",
+    "zutaten": ["250g Mehl", "125g Butter", "500g Zwiebeln", "200ml Sahne", "3 Eier"],
+    "zubereitung": "Teig kneten, Zwiebeln anbraten, mit Sahne & Eiern mischen, auf Teig verteilen, backen.",
+    "modus": "Ober-/Unterhitze",
+    "bild": "https://source.unsplash.com/600x400/?onion-pie"
+  },
+  {
+    "name": "Crepes",
+    "zutaten": ["200g Mehl", "400ml Milch", "2 Eier", "1 Prise Salz"],
+    "zubereitung": "Teig anrühren, dünn in Pfanne ausbacken, nach Wunsch füllen.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?crepes"
   }
 ]
