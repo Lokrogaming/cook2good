@@ -2,26 +2,36 @@
   {
     "name": "Spaghetti Bolognese",
     "zutaten": ["500g Spaghetti", "300g Rinderhackfleisch", "1 Zwiebel", "2 Knoblauchzehen", "500ml Tomatensoße", "Olivenöl", "Salz", "Pfeffer"],
-    "zubereitung": "Spaghetti nach Packungsanweisung kochen. Zwiebel und Knoblauch anbraten, Hackfleisch dazugeben und anbraten. Tomatensoße hinzufügen und würzen. Mit Spaghetti servieren."
+    "zubereitung": "Spaghetti kochen. Zwiebel & Knoblauch anbraten, Hackfleisch dazu, Tomatensoße einrühren, würzen. Mit Spaghetti servieren.",
+    "modus": "Ober-/Unterhitze",
+    "bild": "https://source.unsplash.com/600x400/?spaghetti"
   },
   {
     "name": "Pfannkuchen",
     "zutaten": ["250g Mehl", "500ml Milch", "3 Eier", "1 Prise Salz", "Butter"],
-    "zubereitung": "Mehl, Milch, Eier und Salz zu einem glatten Teig verrühren. In einer Pfanne mit Butter ausbacken. Nach Belieben mit Zucker oder Marmelade servieren."
+    "zubereitung": "Teig rühren, in Pfanne mit Butter ausbacken. Nach Belieben süß oder herzhaft servieren.",
+    "modus": "Pfanne",
+    "bild": "https://source.unsplash.com/600x400/?pancakes"
   },
   {
-    "name": "Kartoffelsalat",
-    "zutaten": ["1kg Kartoffeln", "2 Zwiebeln", "200ml Brühe", "3 EL Essig", "3 EL Öl", "Salz", "Pfeffer", "Schnittlauch"],
-    "zubereitung": "Kartoffeln kochen und abkühlen lassen, dann in Scheiben schneiden. Zwiebeln würfeln und mit Brühe, Essig und Öl vermischen. Alles zusammenrühren und würzen."
+    "name": "Schoko-Kuchen",
+    "zutaten": ["200g Mehl", "200g Zucker", "100g Butter", "100g Schokolade", "3 Eier", "1 Päckchen Backpulver"],
+    "zubereitung": "Butter & Schokolade schmelzen, Eier & Zucker verquirlen, Mehl + Backpulver dazu, backen bei 180°C ~35 Min.",
+    "modus": "Umluft",
+    "bild": "https://source.unsplash.com/600x400/?chocolate-cake"
   },
   {
     "name": "Gemüse-Curry",
     "zutaten": ["300g Brokkoli", "200g Karotten", "1 Paprika", "200ml Kokosmilch", "2 EL Currypaste", "Öl", "Reis"],
-    "zubereitung": "Gemüse schneiden und in Öl anbraten. Currypaste dazugeben und kurz anrösten. Kokosmilch hinzufügen und köcheln lassen. Mit Reis servieren."
+    "zubereitung": "Gemüse schneiden & anbraten, Currypaste anrösten, Kokosmilch dazu, köcheln lassen. Mit Reis servieren.",
+    "modus": "Topf",
+    "bild": "https://source.unsplash.com/600x400/?curry"
   },
   {
-    "name": "Schoko-Kuchen",
-    "zutaten": ["200g Mehl", "200g Zucker", "100g Butter", "100g Zartbitterschokolade", "3 Eier", "1 Päckchen Backpulver"],
-    "zubereitung": "Butter und Schokolade schmelzen, Eier und Zucker verquirlen, Mehl und Backpulver hinzufügen. Alles verrühren und im Ofen bei 180°C ca. 35 Minuten backen."
+    "name": "Pizza Margherita",
+    "zutaten": ["250g Pizzateig", "200g Tomatensoße", "150g Mozzarella", "Basilikum"],
+    "zubereitung": "Teig ausrollen, Soße & Käse drauf, backen bei 220°C ~15 Min, mit Basilikum garnieren.",
+    "modus": "Ober-/Unterhitze",
+    "bild": "https://source.unsplash.com/600x400/?pizza"
   }
 ]
