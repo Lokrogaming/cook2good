@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>🍴 Meine Rezepte</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="src/img/icon.png" rel="icon">
+
+<style>
+    .loader {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .content {
+        display: none;
+    }
+    /* From Uiverse.io by kennyotsu */ 
+.cardLoader {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #dbda8d;
+  --border-color: #d10808;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+  border: solid var(--border-color)
+}
+.loaderCard {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #956afa;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+#modalZubereitung {
+  white-space: pre-line;
+}
+</style>
+
+</head>
+<body class="bg-light">
+<!-- Loader -->
+  <div id="loader" class="loader" style="height:70vh;">
+    <div class="spinner-border text-danger" role="status">
+      <span class="visually-hidden">Laden...</span>
+    </div><br><br>
+    <!-- From Uiverse.io by kennyotsu --> 
+<div class="cardLoader">
+  <div class="loaderCard">
+    <p>loading</p>
+    <div class="words">
+      <span class="word">recepies</span>
+      <span class="word">modes</span>
+      <span class="word">ingredients</span>
+      <span class="word">pictures</span>
+      <span class="word">details</span>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div id="content">
+  <!-- Header -->
+  <nav class="navbar navbar-dark bg-danger mb-4">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"><i class="bi bi-egg-fried"></i> Meine Rezepte</span><button class="btn btn-danger border-black" onclick="window.location.href='index.html'">V1</button>
+    </div>
+    
+  </nav>
+
+  
+
+  <!-- Container für Rezepte -->
+  <div class="container">
+    <div class="row" id="recipeContainer"></div>
+  </div>
+
+  <!-- Modal für größere Ansicht -->
+  <div class="modal fade" id="recipeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="recipeModalLabel"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="img-fluid rounded mb-3" alt="Rezept-Bild">
+          <p><i class="bi bi-list-ul"></i> <strong>Zutaten:</strong></p>
+          <ul id="modalZutaten" class="list-group list-group-flush mb-3"></ul>
+          <p><i class="bi bi-journal-text"></i> <strong>Zubereitung:</strong></p>
+          <p id="modalZubereitung"></p>
+          <p id="modalStepsContainer" style="display:none;">
+  <i class="bi bi-list-ol"></i> <strong>Schritte:</strong>
+</p>
+<ol id="modalSteps" class="list-group list-group-numbered mb-3"></ol>
+          <p><i class="bi bi-tools"></i> <strong>Modus:</strong> <span id="modalModus"></span></p>
+        </div>
+        
+            <div class="modal-footer d-flex justify-content-between">
+  <div id="recipeSource" class="me-auto"></div>
+  <button class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    
+
+    async function loadRecipes() {
+      try {
+        const response = await fetch('recepeItems.json');
+        const data = await response.json();
+
+        const container = document.getElementById('recipeContainer');
+        
+
+        data.forEach((recipe, index) => {
+          const col = document.createElement('div');
+          col.className = "col-md-4 mb-4";
+
+          col.innerHTML = `
+            <div class="card shadow-sm h-100">
+              <img src="${recipe.bild}" class="card-img-top" alt="${recipe.name}">
+              <div class="card-body">
+                <h5 class="card-title">${recipe.name}</h5>
+                <p class="card-text text-truncate">${recipe.zubereitung}</p>
+                <p class="text-muted"><i class="bi bi-tools"></i> ${recipe.modus}</p>
+                <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#recipeModal" data-index="${index}">
+                  <i class="bi bi-eye"></i> Details ansehen
+                </button>
+              </div>
+            </div>
+          `;
+          container.appendChild(col);
+        });
+
+         loader.style.display = "none";
+    content.style.display = "block";
+
+        // Modal befüllen
+        const recipeModal = document.getElementById('recipeModal');
+        recipeModal.addEventListener('show.bs.modal', event => {
+  const button = event.relatedTarget;
+  const idx = button.getAttribute('data-index');
+  const recipe = data[idx];
+
+  document.getElementById('recipeModalLabel').textContent = recipe.name;
+  document.getElementById('modalImage').src = recipe.bild;
+  document.getElementById('modalImage').alt = recipe.name;
+  document.getElementById('modalZubereitung').textContent = recipe.zubereitung;
+  document.getElementById('modalModus').textContent = recipe.modus;
+
+  // Zutaten
+  const zutatenList = document.getElementById('modalZutaten');
+  zutatenList.innerHTML = "";
+  recipe.zutaten.forEach(z => {
+    const li = document.createElement('li');
+    li.className = "list-group-item";
+    li.innerHTML = `<i class="bi bi-check2-circle text-success"></i> ${z}`;
+    zutatenList.appendChild(li);
+  });
+  // Quelle anzeigen
+const recipeSource = document.getElementById('recipeSource');
+recipeSource.innerHTML = ""; // reset
+
+if (recipe.src && recipe.src.url) {
+  let icon = "bi-link-45deg";
+  let color = "secondary";
+  switch (recipe.src.platform.toLowerCase()) {
+    case "chefkoch":
+      icon = "bi-book";
+      color = "success";
+      break;
+    case "youtube":
+      icon = "bi-youtube";
+      color = "danger";
+      break;
+    case "instagram":
+      icon = "bi-instagram";
+      color = "warning";
+      break;
+    case "tiktok":
+      icon = "bi-tiktok";
+      color = "dark";
+      break;
+  }
+
+  recipeSource.innerHTML = `
+    <a href="${recipe.src.url}" target="_blank" 
+       class="btn btn-${color} btn-sm">
+      <i class="bi ${icon}"></i> Quelle: ${recipe.src.author || recipe.src.platform}
+    </a>
+  `;
+}
+
+  // Steps (optional)
+  const stepsContainer = document.getElementById('modalStepsContainer');
+  const stepsList = document.getElementById('modalSteps');
+  stepsList.innerHTML = "";
+  if (recipe.steps && recipe.steps.length > 0) {
+    stepsContainer.style.display = "block";
+    recipe.steps.forEach(step => {
+      const li = document.createElement('li');
+      li.className = "list-group-item";
+      li.textContent = step;
+      stepsList.appendChild(li);
+    });
+  } else {
+    stepsContainer.style.display = "none";
+  }
+});
+
+      } catch (err) {
+        console.error("Fehler beim Laden der Rezepte:", err);
+      }
+    }
+
+    loadRecipes();
+  </script>
+</body>
+</html>

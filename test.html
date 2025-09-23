@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>🍴 Meine Rezepte</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .loader { display:none; flex-direction:column; height:70vh; }
+    .content { display: block; }
+    #modalZubereitung {
+  white-space: pre-line;
+}
+  </style>
+</head>
+<body class="bg-light">
+
+  <div id="loader" class="loader">
+    <div class="text-center">
+      <div class="spinner-border text-danger mb-3" role="status"><span class="visually-hidden">Laden...</span></div>
+      <div>Rezepte werden geladen…</div>
+    </div>
+  </div>
+
+  <div id="content">
+    <nav class="navbar navbar-dark bg-danger mb-4">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><i class="bi bi-egg-fried"></i> Meine Rezepte</span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="messageArea"></div>
+      <div class="row" id="recipeContainer"></div>
+    </div>
+
+    <!-- Modal (wie vorher) -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="recipeModalLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" class="img-fluid rounded mb-3" alt="Rezept-Bild">
+            <p><i class="bi bi-list-ul"></i> <strong>Zutaten:</strong></p>
+            <ul id="modalZutaten" class="list-group list-group-flush mb-3"></ul>
+            <p><i class="bi bi-journal-text"></i> <strong>Zubereitung:</strong></p>
+            <p id="modalZubereitung"></p>
+            <p><i class="bi bi-tools"></i> <strong>Modus:</strong> <span id="modalModus"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const loader = document.getElementById('loader');
+    const content = document.getElementById('content');
+    const container = document.getElementById('recipeContainer');
+    const messageArea = document.getElementById('messageArea');
+
+    function showMessage(html, type = 'danger') {
+      messageArea.innerHTML = `<div class="alert alert-${type}">${html}</div>`;
+    }
+
+    function waitForImages(parent, timeout = 4000) {
+      const imgs = Array.from(parent.querySelectorAll('img'));
+      if (imgs.length === 0) return Promise.resolve();
+      const loaders = imgs.map(img => new Promise(resolve => {
+        if (img.complete) return resolve();
+        img.addEventListener('load', resolve);
+        img.addEventListener('error', resolve);
+      }));
+      return Promise.race([Promise.all(loaders), new Promise(r => setTimeout(r, timeout))]);
+    }
+
+    async function loadRecipes() {
+      try {
+        console.log('Fetch starte...');
+        const response = await fetch('recepeItems.json');
+        if (!response.ok) throw new Error(`Fehler beim Laden (HTTP ${response.status})`);
+        const data = await response.json();
+        console.log('JSON geladen, Einträge:', data.length);
+
+        container.innerHTML = '';
+        data.forEach((recipe, index) => {
+          const col = document.createElement('div');
+          col.className = "col-md-4 mb-4";
+          col.innerHTML = `
+            <div class="card shadow-sm h-100">
+              <img src="${recipe.bild}" class="card-img-top" alt="${recipe.name}">
+              <div class="card-body">
+                <h5 class="card-title">${recipe.name}</h5>
+                <p class="card-text text-truncate">${recipe.zubereitung}</p>
+                <p class="text-muted"><i class="bi bi-tools"></i> ${recipe.modus}</p>
+                <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#recipeModal" data-index="${index}">
+                  <i class="bi bi-eye"></i> Details ansehen
+                </button>
+              </div>
+            </div>
+          `;
+          container.appendChild(col);
+        });
+
+        // Modal handler
+        const recipeModal = document.getElementById('recipeModal');
+        recipeModal.addEventListener('show.bs.modal', event => {
+          const button = event.relatedTarget;
+          const idx = button.getAttribute('data-index');
+          const recipe = data[idx];
+          document.getElementById('recipeModalLabel').textContent = recipe.name;
+          document.getElementById('modalImage').src = recipe.bild;
+          document.getElementById('modalImage').alt = recipe.name;
+          document.getElementById('modalZubereitung').textContent = recipe.zubereitung;
+          document.getElementById('modalModus').textContent = recipe.modus;
+          const zutatenList = document.getElementById('modalZutaten');
+          zutatenList.innerHTML = "";
+          recipe.zutaten.forEach(z => {
+            const li = document.createElement('li');
+            li.className = "list-group-item";
+            li.innerHTML = `<i class="bi bi-check2-circle text-success"></i> ${z}`;
+            zutatenList.appendChild(li);
+          });
+        });
+
+        // Warte kurz auf Bilder (Timeout schützt vor ewigem Warten)
+        await waitForImages(container, 4000);
+
+      } catch (err) {
+        console.error('Ladefehler:', err);
+        showMessage(`Fehler beim Laden der Rezepte: ${err.message}. Öffne DevTools → Network / Console.`, 'danger');
+      } finally {
+        // Immer Loader weg und Content zeigen (auch bei Fehler)
+        loader.style.display = 'none';
+        content.style.display = 'block';
+      }
+    }
+
+    // Start
+    loadRecipes();
+  </script>
+</body>
+</html>

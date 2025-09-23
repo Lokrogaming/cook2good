@@ -2,44 +2,111 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>📖 Rezeptbuch</title>
+  <title>Rezepte</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/6ed0d5c689.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="src/img/icon.png" rel="icon">
+  <style>
+    #modalZubereitung {
+  white-space: pre-line;
+}
+  </style>
 </head>
-<body>
-  <div class="container py-4">
-    <h1 class="text-center mb-4">📖 Mein Rezeptbuch</h1>
+<body class="bg-light">
+  <header class="bg-danger text-white text-center p-3 mb-4">
+    <h1><i class="bi bi-egg-fried"></i> Meine Rezepte</h1>
+    <button class="btn btn-danger border-black" onclick="window.location.href='v2.html'">V2</button>
+  </header>
 
-    <div class="mb-4">
-      <input type="text" id="search" class="form-control" placeholder="🔍 Rezepte oder Zutaten suchen...">
+  <div class="container">
+    <div class="text-center my-4" id="loader">
+      <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Laden...</span>
+      </div>
     </div>
-
-    <div id="recipe-list" class="row g-4"></div>
+    <div class="row" id="recipeContainer"></div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+  <!-- Modal für große Ansicht -->
+  <div class="modal fade" id="recipeModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="recipeModalLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="recipeTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <h6>Zutaten:</h6>
-          <ul id="modalIngredients"></ul>
-          <h6>Zubereitung:</h6>
-          <p id="modalInstructions"></p>
-          <h6>Backmodus:</h6>
-          <p id="modalMode"></p>
+          <img id="recipeImage" class="img-fluid rounded mb-3" alt="">
+          <p><i class="bi bi-list-ul"></i> <strong>Zutaten:</strong></p>
+          <ul id="recipeIngredients" class="list-group list-group-flush mb-3"></ul>
+          <p><i class="bi bi-journal-text"></i> <strong>Zubereitung:</strong></p>
+          <p id="recipeInstructions"></p>
+          <p class="text-muted"><i class="bi bi-fire"></i> <span id="recipeMode"></span></p>
         </div>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    async function loadRecipes() {
+      try {
+        const response = await fetch('recepeItems.json');
+        const data = await response.json();
+
+        const container = document.getElementById('recipeContainer');
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+
+        data.forEach((recipe, index) => {
+          const col = document.createElement('div');
+          col.className = 'col-md-4 mb-4';
+
+          col.innerHTML = `
+            <div class="card h-100 shadow-sm">
+              <img src="${recipe.bild}" class="card-img-top" alt="${recipe.name}">
+              <div class="card-body">
+                <h5 class="card-title">${recipe.name}</h5>
+                <p class="card-text text-truncate">${recipe.zubereitung}</p>
+              </div>
+              <div class="card-footer text-center">
+                <button class="btn btn-danger" onclick="showRecipe(${index})">
+                  <i class="bi bi-eye"></i> Details
+                </button>
+              </div>
+            </div>
+          `;
+
+          container.appendChild(col);
+        });
+
+        window.recipeData = data;
+      } catch (err) {
+        console.error("Fehler beim Laden der Rezepte:", err);
+      }
+    }
+
+    function showRecipe(index) {
+      const recipe = window.recipeData[index];
+      document.getElementById('recipeTitle').innerText = recipe.name;
+      document.getElementById('recipeImage').src = recipe.bild;
+      document.getElementById('recipeInstructions').innerText = recipe.zubereitung;
+      document.getElementById('recipeMode').innerText = `Modus: ${recipe.modus}`;
+
+      const ingredientsList = document.getElementById('recipeIngredients');
+      ingredientsList.innerHTML = "";
+      recipe.zutaten.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.innerText = item;
+        ingredientsList.appendChild(li);
+      });
+
+      const modal = new bootstrap.Modal(document.getElementById('recipeModal'));
+      modal.show();
+    }
+
+    loadRecipes();
+  </script>
 </body>
 </html>

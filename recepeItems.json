@@ -4,202 +4,239 @@
     "zutaten": ["500g Spaghetti", "300g Rinderhackfleisch", "1 Zwiebel", "2 Knoblauchzehen", "500ml Tomatensoße", "Olivenöl", "Salz", "Pfeffer"],
     "zubereitung": "Spaghetti kochen. Zwiebel & Knoblauch anbraten, Hackfleisch dazu, Tomatensoße einrühren, würzen. Mit Spaghetti servieren.",
     "modus": "Ober-/Unterhitze",
-    "bild": "https://source.unsplash.com/600x400/?spaghetti"
+    "bild": "https://heute-at-prod-images.imgix.net/2023/05/30/871745f3-9dda-4a17-accf-0e6608517a97.jpeg?auto=format%2Ccompress&w=1616"
+    
   },
   {
     "name": "Pfannkuchen",
     "zutaten": ["250g Mehl", "500ml Milch", "3 Eier", "1 Prise Salz", "Butter"],
     "zubereitung": "Teig rühren, in Pfanne mit Butter ausbacken. Nach Belieben süß oder herzhaft servieren.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?pancakes"
+    "bild": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVPJGDWm8MoFrcNaneCzqgA07m_AlU2DNrRg&s"
   },
   {
     "name": "Schoko-Kuchen",
     "zutaten": ["200g Mehl", "200g Zucker", "100g Butter", "100g Schokolade", "3 Eier", "1 Päckchen Backpulver"],
     "zubereitung": "Butter & Schokolade schmelzen, Eier & Zucker verquirlen, Mehl + Backpulver dazu, backen bei 180°C ~35 Min.",
     "modus": "Umluft",
-    "bild": "https://source.unsplash.com/600x400/?chocolate-cake"
+    "bild": "https://heute-at-prod-images.imgix.net/2025/07/23/33850771-2ade-4a71-adf9-c066b1aa5921.jpeg?rect=0%2C413%2C2668%2C1501&auto=format"
   },
   {
     "name": "Gemüse-Curry",
     "zutaten": ["300g Brokkoli", "200g Karotten", "1 Paprika", "200ml Kokosmilch", "2 EL Currypaste", "Öl", "Reis"],
     "zubereitung": "Gemüse schneiden & anbraten, Currypaste anrösten, Kokosmilch dazu, köcheln lassen. Mit Reis servieren.",
     "modus": "Topf",
-    "bild": "https://source.unsplash.com/600x400/?curry"
+    "bild": "https://img.ccnull.de/1095000/preview/1099576_12843796d4be5c7d2989bee295157f03.jpg"
   },
   {
     "name": "Pizza Margherita",
     "zutaten": ["250g Pizzateig", "200g Tomatensoße", "150g Mozzarella", "Basilikum"],
     "zubereitung": "Teig ausrollen, Soße & Käse drauf, backen bei 220°C ~15 Min, mit Basilikum garnieren.",
     "modus": "Ober-/Unterhitze",
-    "bild": "https://source.unsplash.com/600x400/?pizza"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg"
   },
   {
     "name": "Lasagne",
     "zutaten": ["Lasagneplatten", "500g Hackfleisch", "1 Zwiebel", "500ml Tomatensoße", "500ml Béchamelsauce", "Käse"],
     "zubereitung": "Hackfleisch anbraten, Tomatensoße dazu, abwechselnd mit Platten und Béchamel schichten. Mit Käse überbacken.",
     "modus": "Umluft",
-    "bild": "https://source.unsplash.com/600x400/?lasagna"
+    "bild": "https://img.ccnull.de/1095000/preview/1099563_ec7a4028f2d4dd538bf56d82ec27b2c3.jpg"
   },
   {
     "name": "Caesar Salad",
     "zutaten": ["Römersalat", "Croutons", "Parmesan", "Caesar-Dressing", "Hähnchenbrust"],
     "zubereitung": "Salat schneiden, Hähnchen anbraten, mit Dressing, Croutons und Parmesan servieren.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?caesar-salad"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/6/68/Salad_Caesar.jpg"
   },
   {
     "name": "Chili con Carne",
     "zutaten": ["400g Hackfleisch", "1 Dose Kidneybohnen", "1 Dose Mais", "500ml Tomatensoße", "Chili", "Zwiebel"],
     "zubereitung": "Hackfleisch mit Zwiebel anbraten, Bohnen, Mais und Tomatensoße dazu, würzen und köcheln lassen.",
     "modus": "Topf",
-    "bild": "https://source.unsplash.com/600x400/?chili"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/2/29/Chili_con_carne_%284431800858%29.jpg"
   },
   {
     "name": "Rindersteak",
     "zutaten": ["2 Rindersteaks", "Salz", "Pfeffer", "Knoblauch", "Butter"],
     "zubereitung": "Steaks würzen, in heißer Pfanne anbraten, Knoblauch & Butter dazu, nach Wunsch garen.",
     "modus": "Grill",
-    "bild": "https://source.unsplash.com/600x400/?steak"
+    "bild": "https://heute-at-prod-images.imgix.net/2022/09/21/bf13f5a1-1238-4894-90d9-891a7b80c6a0.jpeg?auto=format"
   },
   {
     "name": "Gemüsesuppe",
     "zutaten": ["1 Zucchini", "2 Karotten", "2 Kartoffeln", "1 Zwiebel", "1l Gemüsebrühe"],
     "zubereitung": "Gemüse würfeln, in Brühe kochen, pürieren oder stückig lassen.",
     "modus": "Topf",
-    "bild": "https://source.unsplash.com/600x400/?soup"
+    "bild": "https://img.ccnull.de/1100000/preview/1101897_f6ddefde7fb81d9cc6aa9a123942ad9c.jpg"
   },
   {
     "name": "Rührei",
     "zutaten": ["4 Eier", "50ml Milch", "Salz", "Pfeffer", "Butter"],
     "zubereitung": "Eier mit Milch verquirlen, würzen, in Pfanne stocken lassen.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?scrambled-eggs"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/2/24/R%C3%BChrei.jpg"
   },
   {
     "name": "Waffeln",
     "zutaten": ["250g Mehl", "125g Butter", "3 Eier", "100g Zucker", "250ml Milch"],
     "zubereitung": "Alles zu Teig verrühren, im Waffeleisen backen.",
     "modus": "Waffeleisen",
-    "bild": "https://source.unsplash.com/600x400/?waffles"
+    "bild": "https://img.ccnull.de/1095000/preview/1098869_3aacee9704e866ad023c66ab67a8b5d7.jpg"
   },
   {
     "name": "Gulasch",
     "zutaten": ["500g Rindfleisch", "2 Zwiebeln", "Paprika", "500ml Brühe", "Tomatenmark"],
     "zubereitung": "Fleisch anbraten, Zwiebel & Paprika dazu, mit Brühe ablöschen, schmoren lassen.",
     "modus": "Topf",
-    "bild": "https://source.unsplash.com/600x400/?goulash"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Gulasch_nach_der_Klamm_%2818829270025%29.jpg"
   },
   {
     "name": "Kartoffelsalat",
     "zutaten": ["1kg Kartoffeln", "2 Zwiebeln", "200ml Brühe", "3 EL Essig", "3 EL Öl", "Salz", "Pfeffer", "Schnittlauch"],
     "zubereitung": "Kartoffeln kochen, in Scheiben schneiden, Dressing aus Brühe, Essig, Öl und Zwiebeln darüber geben.",
     "modus": "Topf",
-    "bild": "https://source.unsplash.com/600x400/?potato-salad"
+    "bild": "https://img.ccnull.de/1095000/preview/1098345_d1a378becddcb6329305415ea201d099.jpg"
   },
   {
     "name": "Hamburger",
     "zutaten": ["Burgerbrötchen", "Rinderhack-Patties", "Käse", "Salat", "Tomaten", "Zwiebeln", "Soße"],
     "zubereitung": "Patties braten, Brötchen toasten, Zutaten schichten und servieren.",
     "modus": "Grill",
-    "bild": "https://source.unsplash.com/600x400/?burger"
+    "bild": "https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg"
   },
   {
     "name": "Currywurst",
     "zutaten": ["2 Bratwürste", "Ketchup", "Currypulver"],
     "zubereitung": "Würste braten, in Scheiben schneiden, mit Ketchup und Curry bestreuen.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?currywurst"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Currywurst-2024.jpg"
   },
   {
     "name": "Apfelkuchen",
     "zutaten": ["250g Mehl", "125g Butter", "3 Äpfel", "100g Zucker", "1 TL Zimt"],
     "zubereitung": "Teig kneten, Äpfel schneiden, in Form legen, backen bei 180°C ~40 Min.",
     "modus": "Ober-/Unterhitze",
-    "bild": "https://source.unsplash.com/600x400/?apple-pie"
+    "bild": "https://heute-at-prod-images.imgix.net/2025/08/04/a36bff92-7cb9-410b-9d3b-8e58cded555b.jpeg?rect=0%2C640%2C2667%2C1500&auto=format"
   },
   {
     "name": "Tiramisu",
     "zutaten": ["250g Mascarpone", "3 Eier", "100g Zucker", "Löffelbiskuits", "Kaffee", "Kakaopulver"],
     "zubereitung": "Mascarpone mit Eigelb & Zucker mischen, Eiweiß schlagen, unterheben, Biskuits in Kaffee tauchen, schichten.",
     "modus": "Kalt",
-    "bild": "https://source.unsplash.com/600x400/?tiramisu"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tiramisu_-_Raffaele_Diomede.jpg"
   },
   {
     "name": "Porridge",
     "zutaten": ["50g Haferflocken", "200ml Milch", "1 Banane", "Honig"],
     "zubereitung": "Haferflocken mit Milch kochen, Banane dazu, mit Honig süßen.",
     "modus": "Topf",
-    "bild": "https://source.unsplash.com/600x400/?porridge"
+    "bild": "https://i0.wp.com/jamdownfoodie.com/wp-content/uploads/2021/04/completedish2-1-1.jpg?w=720&ssl=1"
   },
   {
     "name": "Fischfilet",
     "zutaten": ["2 Fischfilets", "Zitrone", "Salz", "Pfeffer", "Butter"],
     "zubereitung": "Fisch würzen, in Pfanne mit Butter anbraten, mit Zitrone servieren.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?fish"
+    "bild": "https://img.ccnull.de/1100000/preview/1103886_aeb0eea72f59f3b6a3329aa12839a81c.jpg"
   },
   {
     "name": "Omelett",
     "zutaten": ["3 Eier", "50ml Milch", "Käse", "Schinken", "Salz", "Pfeffer"],
     "zubereitung": "Eier verquirlen, würzen, in Pfanne stocken lassen, Käse & Schinken einrollen.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?omelette"
+    "bild": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7SyQoaa5eGOTFcRCUgowjU6d_k5m9DTc2Ow&s"
   },
   {
     "name": "Sushi",
     "zutaten": ["Sushireis", "Nori-Blätter", "Lachs", "Gurke", "Sojasoße"],
     "zubereitung": "Reis kochen, auf Nori verteilen, mit Zutaten füllen, rollen und schneiden.",
     "modus": "Kalt",
-    "bild": "https://source.unsplash.com/600x400/?sushi"
+    "bild": "https://www.airculinaireworldwide.com/wp-content/uploads/2014/12/12232014-japanese-seafood-sushi.jpg"
   },
   {
     "name": "Quiche Lorraine",
     "zutaten": ["250g Mehl", "125g Butter", "3 Eier", "200ml Sahne", "150g Speck", "Käse"],
     "zubereitung": "Teig kneten, Form auslegen, Füllung aus Speck, Sahne, Eiern & Käse einfüllen, backen bei 180°C ~40 Min.",
     "modus": "Ober-/Unterhitze",
-    "bild": "https://source.unsplash.com/600x400/?quiche"
+    "bild": "https://img.ccnull.de/1095000/preview/1099661_7fd86a2591b5e8a31a4c08a76fc156f7.jpg"
   },
   {
     "name": "Falafel",
     "zutaten": ["200g Kichererbsen", "1 Zwiebel", "Knoblauch", "Koriander", "Kreuzkümmel"],
     "zubereitung": "Kichererbsen pürieren, würzen, Bällchen formen, frittieren.",
     "modus": "Fritteuse",
-    "bild": "https://source.unsplash.com/600x400/?falafel"
+    "bild": "https://upload.wikimedia.org/wikipedia/commons/5/57/Falafels_2.jpg"
   },
   {
     "name": "Ratatouille",
     "zutaten": ["1 Aubergine", "1 Zucchini", "1 Paprika", "1 Zwiebel", "Tomaten"],
     "zubereitung": "Gemüse schneiden, anbraten, in Auflauf schichten, mit Tomatensoße übergießen, backen.",
     "modus": "Umluft",
-    "bild": "https://source.unsplash.com/600x400/?ratatouille"
+    "bild": "https://img.ccnull.de/1095000/preview/1098537_6bf650afd904afbf03c3ac38432aa724.jpg"
   },
   {
     "name": "Brownies",
     "zutaten": ["200g Schokolade", "200g Butter", "3 Eier", "200g Zucker", "100g Mehl"],
     "zubereitung": "Schokolade & Butter schmelzen, Eier & Zucker unterrühren, Mehl dazu, backen bei 180°C ~25 Min.",
     "modus": "Ober-/Unterhitze",
-    "bild": "https://source.unsplash.com/600x400/?brownies"
+    "bild": "https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg"
   },
   {
     "name": "Paella",
     "zutaten": ["200g Reis", "200g Huhn", "100g Garnelen", "1 Paprika", "Safran", "Brühe"],
     "zubereitung": "Reis mit Safran und Brühe kochen, Huhn und Garnelen anbraten, alles mischen.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?paella"
+    "bild": "https://mundodele.com/wp-content/uploads/2025/04/Traditionelle-Zubereitung-einer-Paella-auf-dem-Campo.jpg"
   },
   {
     "name": "Zwiebelkuchen",
     "zutaten": ["250g Mehl", "125g Butter", "500g Zwiebeln", "200ml Sahne", "3 Eier"],
     "zubereitung": "Teig kneten, Zwiebeln anbraten, mit Sahne & Eiern mischen, auf Teig verteilen, backen.",
     "modus": "Ober-/Unterhitze",
-    "bild": "https://source.unsplash.com/600x400/?onion-pie"
+    "bild": "https://img.ccnull.de/1095000/preview/1099599_f5e5416458ac0b74acbbb45514f1b137.jpg"
   },
+  {
+  "name": "Königsberger Klopse",
+  "zutaten": [
+    "250g Rinderhackfleisch",
+    "250g Schweinehackfleisch",
+    "1 Brötchen",
+    "1 große Zwiebel",
+    "2 Eier",
+    "2 EL Paniermehl",
+    "Salz und Pfeffer",
+    "etwas Sardellenpaste",
+    "1 kl. Bund Petersilie",
+    "1 Liter Fleischbrühe",
+    "1 große Zwiebel",
+    "1 Lorbeerblatt",
+    "3 Pimentkörner",
+    "3 Pfefferkörner",
+    "3 EL Margarine oder Butter",
+    "2 EL Mehl",
+    "375 ml Brühe",
+    "1 kl. Glas Kapern",
+    "125 ml Sahne",
+    "Zitronensaft",
+    "Zucker",
+    "1 Eigelb"
+  ],
+  "zubereitung": "Für die Klopse: In einer Schüssel aus Hackfleisch, ausgedrückten Brötchen, geschälten, fein gehackten Zwiebel, Eier, Salz und Pfeffer einen geschmeidigen Fleischteig kneten. Den Klopsteig mit Paniermehl binden. Je nach persönlichem Geschmack kann auch noch ein wenig Sardellenpaste hinzugefügt werden. Aus der Teigmasse Klopse formen.\n\nFür die Brühe:\nDie geschälte, klein gehackte Zwiebel und die Gewürze in die Brühe geben. Brühe erhitzen, evtl. nachsalzen. Die Klopse in die Brühe geben und ca. 10 Minuten köcheln lassen. Dann Lorbeerblatt, Pfefferkörner Pimentkörner herausnehmen. Die Klopse in der Brühe in weiteren ca. 10 Minuten gar ziehen lassen. Dann herausnehmen und abgedeckt warm stellen.\n\nFür die Kapernsauce:\nMargarine oder Butter erhitzen. Mehl darin anschwitzen. Mit der Brühe unter Rühren ablöschen. Die abgetropften Kapern und die Sahne hinzugeben. Die Sauce nun nicht mehr kochen lassen. Mit Zitronensaft, Zucker, Salz und Pfeffer süßsauer abschmecken. Anschließend ein Eigelb zum Legieren in die Sauce rühren, die Klopse hineinlegen und mit der Petersilie garniert servieren.",
+  "modus": "Pfanne",
+  "bild": "https://img.chefkoch-cdn.de/rezepte/1998981323763212/bilder/1560732/crop-958x539/koenigsberger-klopse.jpg",
+  "src": {
+    "url": "https://www.chefkoch.de/rezepte/1998981323763212/Koenigsberger-Klopse.html?utm_source=system&utm_medium=sharinglink&utm_campaign=sharing_rds_ck_web",
+    "author": "Stefan_Lieder",
+    "platform": "chefkoch"
+  }
+}
+,
   {
     "name": "Crepes",
     "zutaten": ["200g Mehl", "400ml Milch", "2 Eier", "1 Prise Salz"],
     "zubereitung": "Teig anrühren, dünn in Pfanne ausbacken, nach Wunsch füllen.",
     "modus": "Pfanne",
-    "bild": "https://source.unsplash.com/600x400/?crepes"
+    "bild": "https://cdn.recetasderechupete.com/wp-content/uploads/2011/05/Crepes-Suzette.jpg"
   }
 ]
